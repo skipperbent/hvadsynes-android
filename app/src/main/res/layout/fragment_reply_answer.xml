@@ -1,0 +1,34 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/messagesContainer">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerProgressContainer"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="25dp">
+
+        <ProgressBar
+            android:id="@+id/answerProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@id/answerProgressContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/messages" />
+
+</RelativeLayout>

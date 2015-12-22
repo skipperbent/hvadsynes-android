@@ -1,0 +1,95 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#EFEFEF"
+        android:orientation="vertical"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/question_bg_m"
+            android:id="@+id/profileinfo"
+            android:scaleType="centerCrop"
+            android:minHeight="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/picture"
+                    android:src="@drawable/male"
+                    android:layout_gravity="bottom"
+                    app:riv_corner_radius="22dp"
+                    app:riv_oval="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/drawerUserName"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/picture"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:id="@+id/drawerUserInfo"
+                    android:textColor="#FFFFFF"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:layout_below="@id/drawerUserName"
+                    android:layout_toRightOf="@id/picture"
+                    android:textSize="13dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileinfo"
+            android:id="@+id/drawerItems"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

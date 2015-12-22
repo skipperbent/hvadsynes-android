@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal|center_vertical"
+    android:id="@+id/messageToolbar"
+    android:clickable="false"
+    android:overScrollMode="never"
+    >
+
+    <HorizontalScrollView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/tooltip"
+        android:background="@drawable/tooltip"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Svar"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/toolbarReply"
+                    android:textColor="#FFF"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like"
+                    android:layout_toRightOf="@id/toolbarReply"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/toolbarLike"
+                    android:textColor="#FFF"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dislike"
+                    android:layout_toRightOf="@id/toolbarLike"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/toolbarDislike"
+                    android:textColor="#FFF"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kopier"
+                    android:layout_toRightOf="@id/toolbarDislike"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/toolbarCopyText"
+                    android:textColor="#FFF"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/triangle"
+        android:rotation="180"
+        android:layout_below="@id/tooltip"
+        android:gravity="bottom">
+
+    </RelativeLayout>
+
+</RelativeLayout>

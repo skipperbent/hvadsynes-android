@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal|center_vertical"
+    android:id="@+id/messageToolbar"
+    android:clickable="false"
+    android:overScrollMode="never"
+    >
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/tooltip"
+        android:background="@drawable/tooltip"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Følg"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:id="@+id/toolbarFollow"
+                android:textColor="#FFF"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Kopier"
+                android:layout_toRightOf="@id/toolbarFollow"
+                android:background="?android:attr/selectableItemBackground"
+                android:id="@+id/toolbarCopyText"
+                android:textColor="#FFF"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Del"
+                android:layout_toRightOf="@id/toolbarCopyText"
+                android:background="?android:attr/selectableItemBackground"
+                android:id="@+id/toolbarShare"
+                android:textColor="#FFF"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/triangle"
+        android:rotation="180"
+        android:layout_below="@+id/tooltip"
+        android:gravity="bottom">
+
+    </RelativeLayout>
+
+</RelativeLayout>

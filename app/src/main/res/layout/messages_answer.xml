@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageBackground"
+        android:background="@drawable/bubble_blue_left_states"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:layout_toRightOf="@id/picture">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment"
+            android:text="Min kommentar"
+            android:textSize="16dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="#FFF"/>
+
+    </LinearLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/picture"
+        android:layout_gravity="bottom"
+        app:riv_corner_radius="22dp"
+        app:riv_oval="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignBottom="@id/messageBackground"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/infoContainer"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/messageBackground"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"
+            android:id="@+id/userInfo"
+            android:textColor="#999"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:id="@+id/time"
+            android:textSize="11dp"
+            android:gravity="center_vertical"
+            android:textColor="#CCC"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
