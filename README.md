@@ -6,4 +6,4 @@ Android app for hvadsynes
 
 ### Issues
 Please report any issues you might encounter here:
-https://github.com/BenjaminMedia/hvadsynes-android/issues
+https://github.com/skipperbent/hvadsynes-android/issues
